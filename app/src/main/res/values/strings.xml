@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">IMDb</string>
+    <string name="celebrity_portrait">Celebrity portrait</string>
+    <string name="film_poster_image_description">Film poster</string>
+    <string name="news_article_image">News article image</string>
+</resources>
