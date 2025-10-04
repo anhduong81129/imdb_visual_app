@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">IMDb</string>
+    <string name="celebrity_portrait">Celebrity portrait</string>
+</resources>

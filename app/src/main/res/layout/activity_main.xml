@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- 1. Featured Carousel (Spotlight) -->
+        <TextView
+            style="@style/SectionHeaderTextStyle"
+            android:text="Spotlight" />
+
+        <!-- Adjust height as needed -->
+        <!-- Optional: Add DotsIndicator here if you use one -->
+
+        <!-- 2. Search Bar -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/featured_carousel_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/home_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search IMDb" />
+
+        <!-- Hotsearch recently -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Hot Searches" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hot_search_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_simple_chip" /> <!-- Create a dummy item_simple_chip.xml for preview -->
+
+        <!-- 3. Featured today -->
+        <TextView
+            style="@style/SectionHeaderTextStyle"
+            android:text="Featured Today" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/featured_today_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_news_article" /> <!-- Create a dummy item_news_article.xml -->
+
+        <!-- 4. Born today -->
+        <TextView
+            style="@style/SectionHeaderTextStyle"
+            android:text="Born Today" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/born_today_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_celebrity_small" /> <!-- Create a dummy item_celebrity_small.xml -->
+
+        <!-- 5. What to watch -->
+        <TextView
+            style="@style/SectionHeaderTextStyle"
+            android:text="What to Watch" />
+
+        <!-- Top 10 IMDb of week -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Top 10 This Week" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/top_10_imdb_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_film_poster" /> <!-- Create a dummy item_movie_poster.xml -->
+
+        <!-- Top picks for you -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Top Picks For You" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/top_picks_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_film_poster" />
+
+        <!-- In theaters near you -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="In Theaters Near You" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/in_theaters_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_film_poster" />
+
+        <!-- Fans favorites -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Fan Favorites" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fan_favorites_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_film_poster" />
+
+        <!-- Oscar winner -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Oscar Winners" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/oscar_winners_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_film_poster" />
+
+
+        <!-- 6. Explore movies and shows -->
+        <TextView
+            style="@style/SectionHeaderTextStyle"
+            android:text="Explore Movies &amp; Shows" />
+
+        <!-- Shows now streaming -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Now Streaming" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/streaming_now_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_film_poster" />
+
+        <!-- Top box office (US) -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Top Box Office (US)" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/top_box_office_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_film_poster" />
+
+        <!-- Coming soon to theaters -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Coming Soon to Theaters" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/coming_soon_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_film_poster" />
+
+        <!-- 7. More to explore -->
+        <TextView
+            style="@style/SectionHeaderTextStyle"
+            android:text="More to Explore" />
+
+        <!-- Popular interests (genres) -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Popular Interests" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popular_interests_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_genre_chip" /> <!-- Create a dummy item_genre_chip.xml -->
+
+        <!-- Top news: hottest -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Top News" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/top_news_more_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_news_article_small" /> <!-- Create a dummy item_news_article_small.xml -->
+
+        <!-- Keep exploring IMDb: some popular questions -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Keep Exploring IMDb" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn_popular_question_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="How are ratings calculated?"/>
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn_popular_question_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Can I contribute to IMDb?"/>
+            <!-- Add more TextViews or Buttons for questions -->
+        </LinearLayout>
+
+        <!-- Follow IMDb on: //link the social medias// -->
+        <TextView
+            style="@style/SubSectionHeaderTextStyle"
+            android:text="Follow IMDb" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <ImageButton
+                android:id="@+id/btn_social_facebook"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_facebook_placeholder" /> <!-- Create a placeholder drawable -->
+            <ImageButton
+                android:id="@+id/btn_social_twitter"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_twitter_placeholder" /> <!-- Create a placeholder drawable -->
+            <ImageButton
+                android:id="@+id/btn_social_instagram"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_instagram_placeholder" /> <!-- Create a placeholder drawable -->
+            <!-- Add more ImageButtons for other social media -->
+        </LinearLayout>
+
+        <!-- Add some bottom padding to the LinearLayout if needed -->
+        <Space android:layout_width="match_parent" android:layout_height="16dp"/>
+
+    </LinearLayout>
+</ScrollView>
