@@ -6,5 +6,5 @@ data class NewsArticle(
     val source: String,         // e.g., "Variety"
     val timeAgo: String,        // e.g., "2h ago"
     val summary: String,
-    val imageUrl: String        // URL for the article image
+    val imageUrl: Int        // URL for the article image
 )

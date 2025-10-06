@@ -42,7 +42,7 @@ class FilmAdapter(private val films: List<Film>) :
             holder.certificateTextView.visibility = View.GONE // Hide it if there is no certificate
         }
 
-        holder.posterImageView.setImageResource(R.drawable.ic_launcher_background) // Placeholder
+        holder.posterImageView.setImageResource(film.posterUrl) // Placeholder
     }
 
     override fun getItemCount(): Int {
