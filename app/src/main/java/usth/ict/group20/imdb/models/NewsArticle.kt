@@ -1,7 +1,7 @@
 package usth.ict.group20.imdb.models
 
 data class NewsArticle(
-    val id: Int,
+    val id: String,
     val headline: String,
     val source: String,         // e.g., "Variety"
     val timeAgo: String,        // e.g., "2h ago"

@@ -10,7 +10,8 @@
     android:layout_marginTop="8dp"
     android:layout_marginBottom="8dp"
     app:cardElevation="4dp"
-    app:cardCornerRadius="12dp">
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@color/news_card_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -42,7 +43,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/article_image"
-            tools:text="This is a Major Movie News Headline That Could Span Two Lines" />
+            tools:text="This is a Major Movie News Headline That Could Span Two Lines"
+            android:textColor="@color/news_headline_color"/>
 
         <!-- Article Source and Date -->
         <TextView
@@ -51,10 +53,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="?android:attr/textColorSecondary"
             app:layout_constraintStart_toStartOf="@id/article_headline"
             app:layout_constraintTop_toBottomOf="@id/article_headline"
-            tools:text="Variety • 2h ago" />
+            tools:text="Variety • 2h ago"
+            android:textColor="@color/news_secondary_text_color"/>
+
+        <TextView
+            android:id="@+id/time_ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Time Ago"
+            app:layout_constraintStart_toStartOf="@id/article_source"
+            app:layout_constraintTop_toBottomOf="@id/article_source" />
 
         <!-- Article Summary -->
         <TextView

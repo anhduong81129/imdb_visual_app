@@ -6,5 +6,6 @@ data class Film(
     val posterUrl: Int,
     val rating: Double,
     val year: Int,
-    val certificate: String? = null
+    val certificate: String? = null,
+    val category: String = ""
 )

@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import usth.ict.group20.imdb.adapters.FilmAdapter
@@ -37,7 +38,7 @@ class SearchResultsActivity : AppCompatActivity() {
         resultsInfoTextView = findViewById(R.id.results_info_textview)
 
         // Setup RecyclerView
-        searchResultsRecyclerView.layoutManager = LinearLayoutManager(this)
+        searchResultsRecyclerView.layoutManager = GridLayoutManager(this, 3)
 
         // Populate the master list of films (same as in MainActivity)
         setupAllFilmData()
@@ -99,17 +100,23 @@ class SearchResultsActivity : AppCompatActivity() {
                 Film(2, "The Godfather", R.drawable.the_godfather, 9.2, 1972, "R"),
                 Film(3, "The Dark Knight", R.drawable.the_dark_knight, 9.0, 2008, "PG-13"),
                 Film(4, "Pulp Fiction", R.drawable.pulp, 8.9, 1994, "R"),
-                Film(10, "Interstellar", R.drawable.interstellar, 8.7, 2014, "PG-13"),
-                Film(11, "The Matrix", R.drawable.the_matrix, 8.7, 1999, "R"),
-                Film(12, "Goodfellas", R.drawable.goodfellas, 8.7, 1990, "R"),
+                Film(5, "Breaking Bad", R.drawable.breaking_bad, 9.0, 2023, "TV-14"),
+                Film(6, "Game of Thrones", R.drawable.game_of_thrones, 9.2, 2011, "TV-MA"),
+                Film(7, "Stranger Things", R.drawable.stranger_things, 8.7, 2016, "TV-14"),
+                Film(8, "The Office", R.drawable.the_office, 9.0, 2005, "TV-14"),
+                Film(9, "The Walking Dead", R.drawable.walking_dead, 8.0, 2010, "TV-14"),
+                Film(10, "The Boys", R.drawable.the_boys, 8.3, 2019, "TV-14"),
+                Film(11, "Interstellar", R.drawable.interstellar, 8.7, 2014, "PG-13"),
+                Film(12, "The Matrix", R.drawable.the_matrix, 8.7, 1999, "R"),
+                Film(13, "Goodfellas", R.drawable.goodfellas, 8.7, 1990, "R"),
                 Film(20, "Dune: Part Two", R.drawable.dune2, 8.8, 2024, "PG-13"),
                 Film(21, "Kung Fu Panda 4", R.drawable.kungfu4, 6.8, 2024, "PG"),
                 Film(30, "Back to the Future", R.drawable.back_to_the_future, 8.5, 1985, "PG"),
                 Film(31, "Jurassic Park", R.drawable.jurassic_park, 8.2, 1993, "PG-13"),
                 Film(40, "Oppenheimer", R.drawable.oppenheimer, 8.6, 2023, "R"),
                 Film(41, "Parasite", R.drawable.parasite, 8.5, 2019, "R"),
-                Film(50, "Glass Onion", R.drawable.shawshank, 7.1, 2022, "PG-13"),
-                Film(60, "Avatar: The Way of Water", R.drawable.shawshank, 7.6, 2022, "PG-13")
+                Film(50, "Glass Onion", R.drawable.glass_onion, 7.1, 2022, "PG-13"),
+                Film(60, "Avatar: The Way of Water", R.drawable.avatar, 7.6, 2022, "PG-13")
             )
         )
     }

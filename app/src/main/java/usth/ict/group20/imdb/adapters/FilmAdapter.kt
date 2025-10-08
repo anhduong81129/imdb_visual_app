@@ -9,8 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import usth.ict.group20.imdb.R
 import usth.ict.group20.imdb.models.Film
 
-class FilmAdapter(private val films: List<Film>) :
+class FilmAdapter(private var films: List<Film>) :
     RecyclerView.Adapter<FilmAdapter.FilmViewHolder>() {
+
+    fun updateFilms(newFilms: List<Film>) {
+        this.films = newFilms
+        notifyDataSetChanged() // This tells the RecyclerView to redraw the list
+    }
 
     class FilmViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val posterImageView: ImageView = view.findViewById(R.id.film_poster_image)

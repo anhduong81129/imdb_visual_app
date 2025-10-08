@@ -17,7 +17,6 @@
         app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircleImageView"
         app:strokeColor="@color/material_grey_600"
         app:strokeWidth="1dp"
-        tools:src="@android:color/darker_gray"
         android:contentDescription="@string/celebrity_portrait" />
 
     <TextView
